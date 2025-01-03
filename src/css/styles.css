@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+html {
+  background-color: #e5e5e5;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 655px;
+  min-height: 347px;
+  box-shadow: 0 27px 49px -25px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  position: relative;
+}
+
+.container .ilustracao {
+  position: absolute;
+  left: -90px;
+}
+
+.container .conteudo {
+  width: 90%;
+  padding-left: 225px;
+}
+
+.container .conteudo .h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.container .conteudo .items .item {
+  cursor: pointer;
+  background-image: url(../images/seta-fechada.svg);
+  background-repeat: no-repeat;
+  background-position: top 8px right 0;
+  background-size: 12px;
+  border-bottom: 1px solid #ccc;
+  margin: 10px 0;
+}
+
+.container .conteudo .items .item:last-child {
+  border-bottom: none;
+}
+
+.container .conteudo .items .item .pergunta {
+  padding-bottom: 15px;
+  transition: 0.2s ease;
+  font-size: 17px;
+  width: 90%;
+  font-weight: 500;
+}
+
+.items .item .pergunta:hover {
+  color: #f47c57;
+}
+
+.container .conteudo .items .item .resposta {
+  display: none;
+  padding-bottom: 15px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+/* ESTILOS DE ITEM DE ACORDEON ATIVO */
+
+.container .conteudo .items .item.ativo h2 {
+  font-weight: 700;
+  font-size: 17px;
+}
+
+.container .conteudo .items .item.ativo .resposta {
+  display: block;
+  animation: Descida 0.4s ease;
+}
+
+.container .conteudo .items .item.ativo {
+  background-image: url(../images/seta-aberta.svg);
+}
+
+@keyframes Descida {
+  from {
+    transform: translateY(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+
